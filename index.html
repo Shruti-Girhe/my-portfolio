@@ -3,73 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shruti Girhe - Portfolio</title>
+    <title>Digital Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="profile">
-                <a href="#education">
-                    <img src="img.jpg" alt="Shruti Girhe">
-                </a>
-                <div class="intro">
-                    <h1>SHRUTI SUNIL GIRHE</h1>
-                    <h1>B.Tech - Computer Science and Engineering</h1>
-                    <p>Motivated final-year Computer Engineering student at MIT AOE with a CGPA of 9.23. Eager to learn and adapt to new technologies, with a strong interest in pursuing opportunities for growth and innovation.</p>
-                    <p><b>Email:</b> shruti.girhe@mitaoe.ac.in | <b>Phone:</b> +91-7249267304</p>
-                    <p><b>Location:</b> Pune City, Maharashtra, India - 412105</p>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="circle">
+                <span class="logo-text">S</span>
+            </div>
+            <span>Shruti Girhe</span>
+        </div>        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education-work">Education</a></li>
+            <li><a href="#education-work">Internship</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+        <button class="contact-btn" onclick="window.location.href='mailto:shruti.girhe@mitaoe.ac.in'">
+            Contact Me
+        </button>
+        <button class="contact-btn" onclick="window.open('https://wa.me/7249267304', '_blank')">
+            Message on WhatsApp
+        </button>
+        
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="intro">
+                <div class="hello-box">
+                    <span>Hello There!</span>
+                </div>
+                <h1>I'm <span class="highlight">Shruti Girhe</span>,<br> a Computer Engineering Student.</h1>
+                <p>Passionate about AI, software development, and problem-solving. Currently exploring deep learning, full-stack development, and building innovative projects.</p>                
+
+                <div class="buttons">
+                    <a href="Resume.pdf" class="btn portfolio" target="_blank">View My Resume <span class="play-icon">▶</span></a>
+                </div>                
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="img.png" alt="Shruti Girhe">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service-item">App Development</div>
+        <div class="divider">*</div>
+        <div class="service-item">Web Development</div>
+        <div class="divider">*</div>
+        <div class="service-item">Deep Learning</div>
+        <div class="divider">*</div>
+        <div class="service-item">Database</div>
+        <div class="divider">*</div>
+        <div class="service-item">Designing</div>
+    </section>
+
+    <section class="education-work" id="education-work">
+        <p class="section-title">— <span class="black-text">Education</span><span class="black-text"> &</span> <span class="black-text">Internship</span></p>
+        <h2>
+            <span class="black-text">My</span> <span class="highlight">Academic and</span><br>
+            <span class="highlight">Professional</span> <span class="black-text">Journey</span>
+        </h2>
+    
+        <div class="cards-container">
+            <!-- Education Section -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="education.png" alt="Education Icon">
+                    <h3 class="highlight">Education</h3>
+                </div>
+                
+                <div class="card-content">
+                    <div class="entry" onclick="openModal('TY.jpg')" title="Click to view proof">
+                        <p class="year">2021 - 2025</p>
+                        <h4>MIT Academy Of Engineering</h4>
+                        <p>Bachelor's in Computer Engineering</p>
+                        <p class="percentage">CGPA: 9.23</p>
+                    </div>
+    
+                    <div class="entry" onclick="openModal('HSC.jpg')" title="Click to view proof">
+                        <p class="year">2019 - 2021</p>
+                        <h4>Bhide Girl's High School</h4>
+                        <p>Higher Secondary Education</p>
+                        <p class="percentage">Percentage: 91</p>
+                    </div>
+    
+                    <div class="entry" onclick="openModal('SSC.jpg')" title="Click to view proof">
+                        <p class="year">2019</p>
+                        <h4>Montfort School</h4>
+                        <p>Secondary Education</p>
+                        <p class="percentage">Percentage: 91.6</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Internship Section -->
+            <div class="card" id="education-work">
+                <div class="card-header">
+                    <img src="internship.png" alt="Internship Icon">
+                    <h3 class="highlight">Internship</h3>
+                </div>
+                <div class="card-content">
+                    <div class="entry" onclick="openModal('galaxe_proof.jpg')" title="Click to view proof">
+                        <p class="year">2025 - Ongoing</p>
+                        <h4>GalaxE Solutions</h4>
+                        <p>Software Development Intern</p>
+                        <p>During my internship, I am working on Full Stack Development using Java, Spring Boot, and React.js. I am responsible for developing and implementing user-friendly UI components, and integrating databases using MySQL.</p>
+                    </div>
+    
+                    <div class="entry" onclick="openModal('novius.png')" title="Click to view proof">
+                        <p class="year">2024</p>
+                        <h4>Novius Solutions</h4>
+                        <p>Software Development Intern</p>
+                        <p>During my internship, I worked as a Project Intern at the company, where I developed a project for analyzing human behavior using real-time data. Later, the project was successfully integrated into their systems.</p>
+                    </div>
+    
+                    <div class="entry" onclick="openModal('internshala.png')" title="Click to view proof">
+                        <p class="year">2023</p>
+                        <h4>Manav.App (Internshala)</h4>
+                        <p>App Developer & Tester</p>
+                        <p>The role involved actively researching and implementing cutting-edge technologies and methodologies within the product development lifecycle. This includes proficient coding and thorough testing to ensure the delivery of high-quality and innovative solutions.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-    
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <h3>MIT Academy of Engineering, Pune</h3>
-            <p>B.Tech - Computer Science and Engineering | CGPA: <b>9.23</b> | 2021 - 2025</p>
-        </div>
-        <div class="edu-item">
-            <h3>Bhide Girls High School, Nagpur</h3>
-            <p>12th | MSSBHSE | Percentage: <b>91/100</b> | 2021</p>
-        </div>
-        <div class="edu-item">
-            <h3>Montfort School, Nagpur</h3>
-            <p>10th | CBSE | Percentage: <b>91.60/100</b> | 2019</p>
-        </div>
     </section>
     
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><b>ExpenseManager:</b> <a href="https://github.com/ShrutiGirhe/ExpenseManager.git">GitHub Link</a></li>
-            <li><b>Sleep Tracker:</b> <a href="https://github.com/ShrutiGirhe/SleepTrack.git">GitHub Link</a></li>
-            <li><b>Human object pose estimation with emotion expression analysis:</b> <a href="https://github.com/Novius-ISSS-AI/30.-MIT--Human-Object-Pose-Estimation-with-Emotion-Expression-Analysis.git">GitHub Link</a></li>
-        </ul>
-    </section>
+    <!-- Modal -->
+    <div id="proofModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="proofImage" src="" alt="Proof Document">
+        </div>
+    </div>
     
-    <section class="internships">
-        <h2>Internships</h2>
-        <p><b>Manav.App (Internshala)</b> | IT / Computers - Software | <i>July 16, 2023 - Sep 15, 2023</i></p>
-        <p>Researched and implemented cutting-edge technologies, ensuring high-quality and innovative solutions.</p>
-        <p><b>Galaxe Solutions</b> | IT / Computers - Software | <i>Jan 20,2025 - OnGoing</i></p>
-        <p>Doing a Full Stack Development internship, gaining hands-on experience in building dynamic web applications with front-end and back-end technologies.</p>
+    <section class="Latest_project" id="project">
+        <div class="Latest_project-header">
+            <h2>My Latest <span>Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="window.open('https://github.com/ShrutiGirhe/ExpenseManager.git', '_blank')">
+                <img src="project1.jpg" alt="Expense Tracker Mobile App">
+                <div class="project-info">
+                    <div class="tags">
+                        <span>UI/UX Design</span>
+                        <span>App Design</span>
+                        <span>Android Studio</span>
+                        <span>Kotlin</span>
+                        <span>Firebase</span>
+                    </div>
+                    <h3>Expense Tracker - Mobile App</h3>
+                </div>
+            </div>
+            
+
+            <!-- Project 2 -->
+            <div class="project-card" onclick="window.open('https://github.com/Novius-ISSS-AI/30.-MIT--Human-Object-Pose-Estimation-with-Emotion-Expression-Analysis', '_blank')">
+                <img src="project2.png" alt="Object Emotion Pose Detection">
+                <div class="project-info">
+                    <div class="tags">
+                        <span>Yolo</span>
+                        <span>Deep Learning</span>
+                        <span>CNN</span>
+                        <span>Dockerize</span>
+                        <span>Dataset</span>
+                    </div>
+                    <h3>Human Object Pose and Emotion Detection</h3>
+                </div>
+            </div>
+
+        </div>
     </section>
-    
-    <section class="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>
-                <b><a href="certificates/cyber.pdf" target="_blank">Cybersecurity virtual internship certificate:</a>:</b>Explored cybersecurity for different platform and real-world applications.</li>
-            <li>
-                <b><a href="certificates/java.pdf" target="_blank">Java FullStack</a>:</b> Gained insights into frontend and backend for creating website.
-            </li>
-        </ul>
+    <section id="skill">
+        <div class="expertise-container">
+            <h2>- Key Expertise</h2>
+            <h3><span class="highlight">Exploring the Skills</span><br><span style="color: white;">Behind My Development</span> </h3>
+            <div class="expertise-list">
+                <div class="expertise-item">
+                    <span>C++</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>Java</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>Deep Learning</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <span>Android Studio</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <section class="certifications" id="certificate">
+        <!-- Yellow line with text -->
+        <div class="certification-header">
+            <div class="line"></div>
+            <p> Certificates</p>
+        </div>
+    
+        <!-- Subtitle -->
+        <p class="certification-subtitle" style="color: black;font-size:30px;font-weight:bold;">My 
+            <span style="color: #F5A623;font-size:30px;font-weight:bold;">Technical Certification</span>
+        </p>
+    
+        <!-- Certificate Boxes -->
+        <div class="certificate-box">
+            <div class="certificate" onclick="openModal('java.png')">Java Full Stack</div>
+            <div class="certificate" onclick="openModal('network.png')">Fundamentals of Network Security</div>
+            <div class="certificate" onclick="openModal('ai.png')">AI Design Challenges</div>
+            <div class="certificate" onclick="openModal('cyber.png')">PaltoAlto Cybersecurity</div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="certificateModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="certificateImage" src="" alt="Certificate">
+        </div>
+    </div>
+    
     <footer>
-        © 2025 Shruti Girhe | Portfolio
+            <div id="footer_detail">
+                <h1>Email:</h1><h4>shruti.girhe@mitaoe.ac.in</h4>
+            </div>
+            <div id="footer_detail">
+                <h1>Contact No.:</h1><h4>7249267304</h4>
+            </div>
+            <div id="footer_detail">
+                <h1>Location:</h1><h4>Pune, Maharashtra</h4>
+            </div>
+            
     </footer>
+    <script>
+
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const offset = 30; // Change this value to adjust the position
+                    const targetPosition = targetElement.offsetTop - offset;
+        
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        function openModal(imageSrc) {
+            document.getElementById("certificateImage").src = imageSrc;
+            document.getElementById("certificateModal").style.display = "flex";
+        }
+    
+        function closeModal(event) {
+            let modal = document.getElementById("certificateModal");
+            if (!event || event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function openModal(imageSrc) {
+            document.getElementById("proofImage").src = imageSrc;
+            document.getElementById("proofModal").style.display = "flex";
+        }
+        
+        function closeModal() {
+            document.getElementById("proofModal").style.display = "none";
+        }
+        
+        // Close modal if user clicks outside the image
+        document.getElementById("proofModal").addEventListener("click", function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+    </script>
+    
 </body>
 </html>
